@@ -1,3 +1,5 @@
+![End-to-End tests](https://github.com/indrajitbnikam/blog-angular-cypress-example/workflows/End-to-End%20tests/badge.svg?branch=master)
+
 # BlogAngularCypressExample
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.2.
