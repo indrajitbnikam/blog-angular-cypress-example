@@ -27,7 +27,7 @@ jobs:
         node-version: ${{ matrix.node-version }}
         
     - name: Install node-modules
-    - run: npm ci
+      run: npm ci
     
     - name: Run e2e tests
-    - run: npm run e2e
+      run: npm run e2e
