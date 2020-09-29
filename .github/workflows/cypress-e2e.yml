@@ -6,8 +6,6 @@ name: End-to-End tests
 on:
   push:
     branches: [ master ]
-  pull_request:
-    branches: [ master ]
 
 jobs:
   build:
@@ -20,14 +18,16 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-  
+
+    # Sets up multiple Node.js environment specified as per array in matrix above
+    # This will result in running same workflow for different environments.
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-        
+
     - name: Install node-modules
       run: npm ci
-    
+
     - name: Run e2e tests
       run: npm run e2e:ci
