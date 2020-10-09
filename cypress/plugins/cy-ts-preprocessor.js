@@ -11,9 +11,28 @@ const webpackOptions = {
         exclude: [/node_modules/],
         use: [
           {
-            loader: "ts-loader"
+            loader: "ts-loader",
+            options: {
+              transpileOnly: true
+            }
+          }, {
+            loader: 'angular2-template-loader'
           }
-        ]
+        ],
+      },
+      {
+        test: /\.(scss)$/,
+        loaders: ['to-string-loader', 'css-loader', 'sass-loader'],
+        exclude: /\.async\.(scss)$/
+      },
+      {
+        test: /\.(html)$/,
+        loader: 'html-loader',
+        exclude: /\.async\.(css)$/
+      },
+      {
+        test: /\.async\.(html|scss)$/,
+        loaders: ['file?name=[name].[hash].[ext]', 'extract']
       }
     ]
   }
