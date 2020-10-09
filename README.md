@@ -1,4 +1,4 @@
-![End-to-End tests](https://github.com/indrajitbnikam/blog-angular-cypress-example/workflows/End-to-End%20tests/badge.svg?branch=master)
+![Cypress Tests](https://github.com/indrajitbnikam/blog-angular-cypress-example/workflows/Cypress%20Tests/badge.svg)
 
 # BlogAngularCypressExample
 
